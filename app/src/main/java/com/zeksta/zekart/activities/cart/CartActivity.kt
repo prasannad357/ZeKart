@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.zeksta.zekart.activities.ordersummary.OrderSummaryActivity
@@ -52,11 +53,16 @@ class CartActivity : AppCompatActivity() {
 
         binding.buCartSubmit.setOnClickListener {
             val cartList = adapter.onSubmitClick()
-            val intent = Intent(this@CartActivity,OrderSummaryActivity::class.java)
-            val bundle = Bundle()
-            bundle.putSerializable("cartList", cartList)
-            intent.putExtra("bundle", bundle)
-            startActivity(intent)
+            if(cartList.size > 0){
+                val intent = Intent(this@CartActivity,OrderSummaryActivity::class.java)
+                val bundle = Bundle()
+                bundle.putSerializable("cartList", cartList)
+                intent.putExtra("bundle", bundle)
+                startActivity(intent)
+            }else{
+                Toast.makeText(this, "Select all details to submit a product", Toast.LENGTH_SHORT).show()
+            }
+
         }
 
     }

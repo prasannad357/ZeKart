@@ -16,6 +16,7 @@ import com.zeksta.zekart.models.Product
 import com.zeksta.zekart.models.CartProduct
 import com.zeksta.zekart.utils.ZekartUtils.afterTextChanged
 
+
 /**
  * Note:
  * I have added "Select" to brand list dropdown because I want to make user select a brand
@@ -27,6 +28,9 @@ class CartAdapter(private val products:List<Product>):RecyclerView.Adapter<Recyc
     private val cartProductList:ArrayList<CartProduct> = ArrayList()
     private val selectedProductIdList:ArrayList<String> = ArrayList()
 
+    override fun getItemViewType(position: Int): Int {
+        return position
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         context = parent.context
@@ -61,10 +65,16 @@ class CartAdapter(private val products:List<Product>):RecyclerView.Adapter<Recyc
                 brandNameList.add(brand.name)
             }
             binding.spinCartBrand.adapter = ArrayAdapter(context, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item, brandNameList)
-            when{
-                !product.colors.contains("Red") -> binding.rbCartRed.visibility = RadioButton.GONE
-                !product.colors.contains("Blue") -> binding.rbCartBlue.visibility = RadioButton.GONE
-                !product.colors.contains("Green") -> binding.rbCartGreen.visibility = RadioButton.GONE
+
+            if(product.colors.contains("Red")){
+                binding.rbCartRed.visibility = RadioButton.VISIBLE
+            }
+            if(product.colors.contains("Blue")){
+                binding.rbCartBlue.visibility = RadioButton.VISIBLE
+            }
+
+            if(product.colors.contains("Green")){
+                binding.rbCartGreen.visibility = RadioButton.VISIBLE
             }
 
             binding.rgCartColor.setOnCheckedChangeListener(object:RadioGroup.OnCheckedChangeListener{
@@ -129,13 +139,13 @@ class CartAdapter(private val products:List<Product>):RecyclerView.Adapter<Recyc
             Glide.with(context)
                 .load(product.picture)
                 .placeholder(R.drawable.placeholder_img)
-                .diskCacheStrategy(DiskCacheStrategy.ALL)
+                .diskCacheStrategy(DiskCacheStrategy.NONE)
                 .into(binding.ivCartProduct)
 
         }
     }
 
-    private fun validateCart(cartProductList:ArrayList<CartProduct>):ArrayList<CartProduct>{
+    private fun validateCart(cartProductList: ArrayList<CartProduct>):ArrayList<CartProduct>{
         val validatedCartList = arrayListOf<CartProduct>()
         cartProductList.forEach { cart ->
             if(cart.colors.isNotEmpty() && cart.brand != null && cart.qty > 0){

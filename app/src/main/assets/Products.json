@@ -2,7 +2,7 @@
 	{
 		"_id": "60c30c3d54a6468980addbff",
 		"price": "$1,233.81",
-		"picture": "http://placehold.it/256x256",
+		"picture": "https://api.lorem.space/image/furniture?w=256&h=256",
 		"colors": [
 			"Red",
 			"Blue"
@@ -26,7 +26,7 @@
 	{
 		"_id": "60c30c3dfe5afa7999c39e52",
 		"price": "$1,440.19",
-		"picture": "http://placehold.it/256x256",
+		"picture": "https://api.lorem.space/image/furniture?w=256&h=256",
 		"colors": [
 			"Red",
 			"Blue",
@@ -51,7 +51,7 @@
 	{
 		"_id": "60c30c3de6a2c2ea92535e94",
 		"price": "$2,036.82",
-		"picture": "http://placehold.it/256x256",
+		"picture": "https://api.lorem.space/image/furniture?w=256&h=256",
 		"colors": [
 			"Blue",
 			"Green"
@@ -75,7 +75,7 @@
 	{
 		"_id": "60c30c3de4c16dadb861c5a0",
 		"price": "$1,898.12",
-		"picture": "http://placehold.it/256x256",
+		"picture": "https://api.lorem.space/image/furniture?w=256&h=256",
 		"colors": [
 			"Red",
 			"Blue"
@@ -99,7 +99,7 @@
 	{
 		"_id": "60c30c3d699af5b7ed621070",
 		"price": "$1,109.99",
-		"picture": "http://placehold.it/256x256",
+		"picture": "https://api.lorem.space/image/furniture?w=256&h=256",
 		"colors": [
 			"Red",
 			"Blue",
@@ -124,7 +124,7 @@
 	{
 		"_id": "60c30c3daf092fed381dba9d",
 		"price": "$3,433.40",
-		"picture": "http://placehold.it/256x256",
+		"picture": "https://api.lorem.space/image/furniture?w=256&h=256",
 		"colors": [
 			"Red",
 			"Green"
@@ -148,7 +148,7 @@
 	{
 		"_id": "60c30c3dba2f588ea4301e9c",
 		"price": "$1,325.10",
-		"picture": "http://placehold.it/256x256",
+		"picture": "https://api.lorem.space/image/furniture?w=256&h=256",
 		"colors": [
 			"Blue",
 			"Green"
@@ -172,7 +172,7 @@
 	{
 		"_id": "60c30c3d1ead8a0ce227274b",
 		"price": "$2,217.90",
-		"picture": "http://placehold.it/256x256",
+		"picture": "https://api.lorem.space/image/furniture?w=256&h=256",
 		"colors": [
 			"Red",
 			"Blue",
@@ -197,7 +197,7 @@
 	{
 		"_id": "60c30c3d5cfeea8fc250ad9a",
 		"price": "$3,608.41",
-		"picture": "http://placehold.it/256x256",
+		"picture": "https://api.lorem.space/image/furniture?w=256&h=256",
 		"colors": [
 			"Red"
 		],
@@ -220,7 +220,7 @@
 	{
 		"_id": "60c30c3d5abce6bec089233f",
 		"price": "$1,477.75",
-		"picture": "http://placehold.it/256x256",
+		"picture": "https://api.lorem.space/image/furniture?w=256&h=256",
 		"colors": [
 			"Red",
 			"Blue",

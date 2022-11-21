@@ -4,12 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/card_background"
+    android:elevation="5dp"
     android:padding="10dp">
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ivCartProduct"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/ic_launcher_foreground" />
@@ -17,10 +21,11 @@
     <TextView
         android:id="@+id/tvCartProductName"
         android:layout_width="wrap_content"
-        android:layout_height="40dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:text="Product Name"
-        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/ivCartProduct"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,8 +35,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="2dp"
         android:text="Price:"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/ivCartProduct"
         app:layout_constraintTop_toBottomOf="@+id/tvCartProductName" />
 
@@ -40,8 +46,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="2dp"
         android:text="$2830.45"
+        android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/tvCartPriceText"
         app:layout_constraintTop_toBottomOf="@+id/tvCartProductName" />
 
@@ -50,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="2dp"
         android:orientation="horizontal"
         app:layout_constraintStart_toEndOf="@id/ivCartProduct"
         app:layout_constraintTop_toBottomOf="@id/tvCartPriceText">
@@ -59,18 +66,23 @@
             android:id="@+id/rbCartRed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
             android:text="Red" />
 
         <RadioButton
             android:id="@+id/rbCartBlue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:visibility="gone"
             android:text="Blue" />
 
         <RadioButton
             android:id="@+id/rbCartGreen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:visibility="gone"
             android:text="Green" />
     </RadioGroup>
 
@@ -79,27 +91,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="2dp"
         app:layout_constraintStart_toEndOf="@id/ivCartProduct"
         app:layout_constraintTop_toBottomOf="@id/rgCartColor" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/etCartQty"
         android:layout_width="wrap_content"
-        android:layout_height="48dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="2dp"
         android:hint="Enter Qty"
         android:inputType="number"
+        android:maxLength="9"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@id/ivCartProduct"
         app:layout_constraintTop_toBottomOf="@id/spinCartBrand" />
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etCartQty"
-        app:srcCompat="@color/black" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
