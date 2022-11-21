@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivCartProduct"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/tvCartProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:text="Product Name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ivCartProduct"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCartPriceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Price:"
+        app:layout_constraintStart_toEndOf="@+id/ivCartProduct"
+        app:layout_constraintTop_toBottomOf="@+id/tvCartProductName" />
+
+    <TextView
+        android:id="@+id/tvCartPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="$2830.45"
+        app:layout_constraintStart_toEndOf="@+id/tvCartPriceText"
+        app:layout_constraintTop_toBottomOf="@+id/tvCartProductName" />
+
+    <RadioGroup
+        android:id="@+id/rgCartColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toEndOf="@id/ivCartProduct"
+        app:layout_constraintTop_toBottomOf="@id/tvCartPriceText">
+
+        <RadioButton
+            android:id="@+id/rbCartRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Red" />
+
+        <RadioButton
+            android:id="@+id/rbCartBlue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blue" />
+
+        <RadioButton
+            android:id="@+id/rbCartGreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Green" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinCartBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintStart_toEndOf="@id/ivCartProduct"
+        app:layout_constraintTop_toBottomOf="@id/rgCartColor" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etCartQty"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:hint="Enter Qty"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@id/ivCartProduct"
+        app:layout_constraintTop_toBottomOf="@id/spinCartBrand" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/etCartQty"
+        app:srcCompat="@color/black" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

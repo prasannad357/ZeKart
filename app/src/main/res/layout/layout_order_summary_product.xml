@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivSummaryProduct"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher_foreground" />
+
+    <TextView
+        android:id="@+id/tvSummaryProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:text="Product Name"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/ivSummaryProduct"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSummaryQtyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Qty:"
+        app:layout_constraintStart_toEndOf="@+id/ivSummaryProduct"
+        app:layout_constraintTop_toBottomOf="@+id/tvSummaryProductName" />
+
+
+    <TextView
+        android:id="@+id/tvSummaryQty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:text="25"
+        app:layout_constraintStart_toEndOf="@+id/tvSummaryQtyText"
+        app:layout_constraintTop_toBottomOf="@+id/tvSummaryProductName" />
+
+    <TextView
+        android:id="@+id/tvSummaryPriceText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:text="Price"
+        app:layout_constraintEnd_toStartOf="@+id/tvSummaryPrice"
+        app:layout_constraintTop_toBottomOf="@+id/tvSummaryProductName" />
+
+    <TextView
+        android:id="@+id/tvSummaryPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:text="$2830.45"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvSummaryProductName" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Selected Color:"
+        app:layout_constraintStart_toEndOf="@+id/ivSummaryProduct"
+        app:layout_constraintTop_toBottomOf="@+id/tvSummaryQtyText" />
+
+    <TextView
+        android:id="@+id/tvSummaryColor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Color"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/tvSummaryQtyText" />
+
+    <TextView
+        android:id="@+id/tvSummaryBrandText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Brand:"
+        app:layout_constraintStart_toEndOf="@+id/ivSummaryProduct"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/tvSummaryBrand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Brand Name"
+        app:layout_constraintStart_toEndOf="@+id/tvSummaryBrandText"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/tvSummaryTotalPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:text="$2830.45"
+        app:layout_constraintStart_toEndOf="@+id/ivSummaryProduct"
+        app:layout_constraintTop_toBottomOf="@+id/tvSummaryBrandText" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/tvSummaryTotalPrice"
+        app:srcCompat="@color/black" />
+</androidx.constraintlayout.widget.ConstraintLayout>
